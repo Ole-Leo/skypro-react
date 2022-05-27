@@ -1,1 +1,1 @@
-# skyPro-React
+# sky-react
