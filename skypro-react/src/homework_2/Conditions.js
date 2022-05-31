@@ -1,6 +1,5 @@
 import { textForTask, textForTaskDuplicate } from './Text';
 
-// const show = true;
 const show = false;
 
 function Conditions() {

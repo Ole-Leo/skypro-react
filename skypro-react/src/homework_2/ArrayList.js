@@ -4,8 +4,9 @@ function ArrayList() {
   return (
     <>
       <ul>
-        {arr.map((elem) => (
-          <li>{elem}</li>
+        {arr.map((elem, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <li key={index}>{elem}</li>
         ))}
       </ul>
       <hr />
