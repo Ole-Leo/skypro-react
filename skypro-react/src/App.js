@@ -1,21 +1,12 @@
-import Text from './homework_2/Text';
-import Attributes from './homework_2/Attributes';
-import TextWithCSS from './homework_2/TextWithCSS';
-import Conditions from './homework_2/Conditions';
-import ArrayList from './homework_2/ArrayList';
-import Methods from './homework_2/Methods';
-import RewriteInJSX from './homework_2/RewriteInJSX';
+import Counter from './homework_3/Counter';
+import CounterWithInput from './homework_3/CounterWithInput';
 
 function App() {
   return (
     <>
-      <Text />
-      <Attributes />
-      <TextWithCSS />
-      <Conditions />
-      <ArrayList />
-      <Methods />
-      <RewriteInJSX />
+      <Counter />
+      <hr />
+      <CounterWithInput />
     </>
   );
 }
