@@ -11,11 +11,11 @@ class CounterWithInput extends React.Component {
   }
 
   onChange(event) {
-    let inputValue = Number(event.target.value);
+    let inputValue = event.target.value;
     this.state.current = inputValue.replace(/\D/gi, '');
     if (inputValue > max) inputValue = max;
     if (inputValue < min) inputValue = min;
-    this.setState(() => ({ current: inputValue }));
+    this.setState(() => ({ current: Number(inputValue) }));
   }
 
   increment = () => {
