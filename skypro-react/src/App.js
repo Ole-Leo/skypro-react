@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Text from './homework_2/Text';
+import Attributes from './homework_2/Attributes';
+import TextWithCSS from './homework_2/TextWithCSS';
+import Conditions from './homework_2/Conditions';
+import ArrayList from './homework_2/ArrayList';
+import Methods from './homework_2/Methods';
+import RewriteInJSX from './homework_2/RewriteInJSX';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Text />
+      <Attributes />
+      <TextWithCSS />
+      <Conditions />
+      <ArrayList />
+      <Methods />
+      <RewriteInJSX />
+    </>
   );
 }
 
