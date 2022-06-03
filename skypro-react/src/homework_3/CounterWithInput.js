@@ -12,7 +12,6 @@ class CounterWithInput extends React.Component {
 
   onChange(event) {
     let inputValue = event.target.value.replace(/\D/gi, '');
-    this.setState({ current: inputValue });
     if (inputValue > max) inputValue = max;
     if (inputValue < min) inputValue = min;
     this.setState(() => ({ current: inputValue }));
