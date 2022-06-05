@@ -1,12 +1,12 @@
-function Book(props) {
+const Book = ({ name, year, price }) => {
   return (
     <>
-      <h2>{props.name}</h2>
-      <p>{props.year}</p>
-      <p>{props.price}</p>
+      <h2>{name}</h2>
+      <p>{year}</p>
+      <p>{price}</p>
     </>
   );
-}
+};
 
 function RewriteInJSX() {
   return (
