@@ -1,12 +1,13 @@
-import Counter from './homework_3/Counter';
-import CounterWithInput from './homework_3/CounterWithInput';
+import ReactStopwatch from './homework_4/ReactStopwatch';
+import Clock from './homework_4/Clock';
+import PomodoroTracker from './homework_4/PomodoroTracker';
 
 function App() {
   return (
     <>
-      <Counter />
-      <hr />
-      <CounterWithInput />
+      <ReactStopwatch />
+      <Clock />
+      <PomodoroTracker />
     </>
   );
 }
