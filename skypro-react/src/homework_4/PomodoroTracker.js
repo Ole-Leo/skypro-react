@@ -4,9 +4,9 @@ import { second, minute } from './additional';
 const oneMinute = 6000;
 
 const tracker = {
-  'work time': 30 * oneMinute,
-  'long break': 15 * oneMinute,
-  'short break': 7 * oneMinute,
+  'work-time': 30 * oneMinute,
+  'long-break': 15 * oneMinute,
+  'short-break': 7 * oneMinute,
 };
 
 export default class PomodoroTracker extends React.Component {
@@ -14,9 +14,6 @@ export default class PomodoroTracker extends React.Component {
     super(props);
     this.state = {
       counter: 0,
-      workTime: tracker['work time'],
-      longBreak: tracker['long break'],
-      shortBreak: tracker['short break'],
       isCounting: false,
     };
   }
@@ -54,13 +51,13 @@ export default class PomodoroTracker extends React.Component {
     const targetAttr = event.target.dataset.status;
 
     if (targetAttr === 'work') {
-      this.setState({ counter: this.state.workTime, isCounting: true });
+      this.setState({ counter: tracker['work-time'], isCounting: true });
     }
     if (targetAttr === 'long-break') {
-      this.setState({ counter: this.state.longBreak, isCounting: true });
+      this.setState({ counter: tracker['long-break'], isCounting: true });
     }
     if (targetAttr === 'short-break') {
-      this.setState({ counter: this.state.shortBreak, isCounting: true });
+      this.setState({ counter: tracker['short-break'], isCounting: true });
     }
 
     this.timer = setInterval(() => this.decrement(), 10);
