@@ -50,15 +50,7 @@ export default class PomodoroTracker extends React.Component {
     clearInterval(this.timer);
     const targetAttr = event.target.dataset.status;
 
-    if (targetAttr === 'work') {
-      this.setState({ counter: tracker['work-time'], isCounting: true });
-    }
-    if (targetAttr === 'long-break') {
-      this.setState({ counter: tracker['long-break'], isCounting: true });
-    }
-    if (targetAttr === 'short-break') {
-      this.setState({ counter: tracker['short-break'], isCounting: true });
-    }
+    this.setState({ counter: tracker[targetAttr], isCounting: true });
 
     this.timer = setInterval(() => this.decrement(), 10);
   };
@@ -76,7 +68,7 @@ export default class PomodoroTracker extends React.Component {
           <button onClick={this.stopHandler}>Stop</button>
         ) : (
           <div>
-            <button data-status="work" onClick={this.startHandler}>
+            <button data-status="work-time" onClick={this.startHandler}>
               Work Time
             </button>
             <button data-status="long-break" onClick={this.startHandler}>
