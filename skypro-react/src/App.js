@@ -1,13 +1,15 @@
-import ReactStopwatch from './homework_4/ReactStopwatch';
-import Clock from './homework_4/Clock';
-import PomodoroTracker from './homework_4/PomodoroTracker';
+import ShowHide from './homework_5/ShowHide';
+import TwoSquares from './homework_5/TwoSquares';
+import CounterFn from './homework_5/CounterFn';
+import CounterWithInputFn from './homework_5/CounterWithInputFn';
 
 function App() {
   return (
     <>
-      <ReactStopwatch />
-      <Clock />
-      <PomodoroTracker />
+      <ShowHide />
+      <TwoSquares />
+      <CounterFn />
+      <CounterWithInputFn />
     </>
   );
 }
