@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/homework_2
+/src/homework_3
+/src/homework_4
+/src/homework_5

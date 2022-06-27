@@ -1,42 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
+  width: 100rem;
   margin: 0 auto;
-  width: 600px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lora', serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  padding: 5rem;
 }
 
-.container {
+.counter {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  justify-content: center;
+  gap: 2px;
 }
 
-.square {
-  width: 150px;
-  height: 150px;
-  border-radius: 8px;
+.counter__button {
+  padding: 5px 10px;
+  background-color: #354e96;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.blue-color {
-  background-color: blue;
-}
-.green-color {
-  background-color: green;
+.counter__input {
+  width: 3rem;
+  padding: 0 5px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  color: #182e6e;
+  border-radius: 5px;
+  border: 2px solid #354e96;
 }
 
-.red-color {
-  background-color: red;
+.cart-content {
+  margin-bottom: 5rem;
 }
 
-.hidden {
-  visibility: hidden;
+.book {
+  width: 60rem;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.6rem;
+  color: #182e6e;
+  border: 1px solid #8f9dc5;
+  border-radius: 6px;
+}
+
+.book__title {
+  width: 30rem;
+  font-size: 1.8rem;
+}
+
+.book__price {
+  font-weight: 600;
+  width: 4rem;
+}
+
+.total-price {
+  margin-right: 7rem;
+  font-weight: 600;
+}
+
+.delete {
+  padding: 5px 10px;
+  background-color: #354e96;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-password {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-content {
+  width: 40rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.label {
+  width: 6.5rem;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #182e6e;
+}
+
+.input {
+  padding: 3px 8px;
+  color: inherit;
+  border-radius: 12px;
+  border: 1px solid #182e6e;
+  outline: none;
+}
+
+.input::placeholder {
+  font-family: 'Lora', serif;
+  color: #8f9dc5;
+  font-size: 1.2rem;
+}
+
+.alert {
+  color: #e11d48;
 }
