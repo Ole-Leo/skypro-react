@@ -1,35 +1,46 @@
 import { useState } from 'react';
 
-const Input = ({ label, text, type, name }) => {
-  const [inputValue, setInputValue] = useState('');
+const useInputReq = (initialValue) => {
+  const [inputValue, setInputValue] = useState(initialValue);
   const [isRequired, setIsRequired] = useState(false);
 
-  const onFocusChange = () => {
+  const onBlurChange = () => {
     setIsRequired(inputValue === '' && { isRequired: true });
   };
 
-  const onValueChange = event => {
+  const onValueChange = (event) => {
     const targetVal = event.target.value;
     setInputValue(targetVal);
   };
 
+  return {
+    inputValue,
+    isRequired,
+    onBlurChange,
+    onValueChange,
+  };
+};
+
+const Input = ({ type, name, text }) => {
+  const inputCopy = useInputReq('');
+
   return (
     <>
       <div className="input-content">
-        <label htmlFor={label} className="label">
+        <label htmlFor={name} className="label">
           {text}
         </label>
         <input
           className="input"
           name={name}
           type={type}
-          id={label}
+          id={name}
           placeholder={text}
-          value={inputValue}
-          onChange={onValueChange}
-          onBlur={onFocusChange}
+          value={inputCopy.inputValue}
+          onChange={inputCopy.onValueChange}
+          onBlur={inputCopy.onBlurChange}
         />
-        {isRequired && (
+        {inputCopy.isRequired && (
           <span className="alert">{`We still need your ${text}`}</span>
         )}
       </div>
