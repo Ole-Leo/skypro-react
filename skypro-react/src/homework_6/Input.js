@@ -11,6 +11,7 @@ const useInputReq = (initialValue) => {
   const onValueChange = (event) => {
     const targetVal = event.target.value;
     setInputValue(targetVal);
+    setIsError(inputValue && false);
   };
 
   return {
