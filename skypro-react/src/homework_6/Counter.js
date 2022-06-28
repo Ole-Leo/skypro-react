@@ -1,19 +1,19 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 
-export default function Counter({ min = 1, max, onAmountChange }) {
-  const [counter, setCounter] = useState(min);
-
-  useEffect(() => {
-    onAmountChange(counter);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [counter]);
-
+const Counter = ({ min = 1, max, value, onAmountChange }) => {
+  const [counter, setCounter] = useState(value);
   const changeCount = (event) => {
     let inputValue = parseInt(event.target.value, 10);
     if (inputValue > max) inputValue = max;
     if (inputValue < min) inputValue = min;
     setCounter(isNaN(inputValue) ? min : inputValue);
   };
+
+  useEffect(() => {
+    onAmountChange(counter);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [counter]);
 
   const decrement = () => {
     setCounter((prevCount) => (prevCount === min ? min : prevCount - 1));
@@ -39,4 +39,13 @@ export default function Counter({ min = 1, max, onAmountChange }) {
       </button>
     </div>
   );
-}
+};
+
+Counter.propTypes = {
+  min: PropTypes.number,
+  max: PropTypes.number,
+  value: PropTypes.number,
+  onAmountChange: PropTypes.func,
+};
+
+export default Counter;

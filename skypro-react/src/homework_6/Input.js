@@ -2,20 +2,21 @@ import { useState } from 'react';
 
 const useInputReq = (initialValue) => {
   const [inputValue, setInputValue] = useState(initialValue);
-  const [isRequired, setIsRequired] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const onBlurChange = () => {
-    setIsRequired(inputValue === '' && { isRequired: true });
+    setIsError(!inputValue && true);
   };
 
   const onValueChange = (event) => {
     const targetVal = event.target.value;
     setInputValue(targetVal);
+    setIsError(inputValue && false);
   };
 
   return {
     inputValue,
-    isRequired,
+    isError,
     onBlurChange,
     onValueChange,
   };
@@ -40,7 +41,7 @@ const Input = ({ type, name, text }) => {
           onChange={inputCopy.onValueChange}
           onBlur={inputCopy.onBlurChange}
         />
-        {inputCopy.isRequired && (
+        {inputCopy.isError && (
           <span className="alert">{`We still need your ${text}`}</span>
         )}
       </div>
