@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { bookList } from './bookList';
-import Total from './Total';
-import BookCopy from './BookCopy';
+import TotalPrice from './TotalPrice';
 
-export default function BookCart() {
+import OrderDetail from './OrderDetail';
+
+const Order = () => {
   const [books, setBooks] = useState(bookList);
 
   const deleteBook = (id) => {
@@ -20,15 +21,17 @@ export default function BookCart() {
     <>
       <div className="cart-content">
         {books.map((book) => (
-          <BookCopy
+          <OrderDetail
             key={book.id}
             book={book}
             deleteBook={() => deleteBook(book.id)}
             onAmountChange={(quantity) => setQuantity(book.id, quantity)}
           />
         ))}
-        <Total totalAmount={books} />
+        <TotalPrice total={books} />
       </div>
     </>
   );
-}
+};
+
+export default Order;

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Counter from './Counter';
 
-const BookCopy = ({ book, deleteBook, onAmountChange }) => {
+const OrderDetail = ({ book, deleteBook, onAmountChange }) => {
   return (
     <article className="book">
       <h3 className="book__title">{book.title}</h3>
@@ -18,7 +18,7 @@ const BookCopy = ({ book, deleteBook, onAmountChange }) => {
   );
 };
 
-BookCopy.propTypes = {
+OrderDetail.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     title: PropTypes.string,
@@ -30,4 +30,4 @@ BookCopy.propTypes = {
   onAmountChange: PropTypes.func,
 };
 
-export default BookCopy;
+export default OrderDetail;

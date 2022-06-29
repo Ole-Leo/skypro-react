@@ -1,14 +1,9 @@
-// import NumberGenerator from './homework_7/NumberGenerator';
-
-import BookCart from './homework_6/BookCart';
-import LoginPassword from './homework_6/LoginPassword';
+import Order from './homework_8/Order';
 
 function App() {
   return (
     <>
-      <BookCart />
-      <LoginPassword />
-      {/* <NumberGenerator /> */}
+      <Order />
     </>
   );
 }
