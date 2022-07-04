@@ -1,15 +1,11 @@
-import ShowHide from './homework_5/ShowHide';
-import TwoSquares from './homework_5/TwoSquares';
-import CounterFn from './homework_5/CounterFn';
-import CounterWithInputFn from './homework_5/CounterWithInputFn';
+import BookCart from './homework_6/BookCart';
+import LoginPassword from './homework_6/LoginPassword';
 
 function App() {
   return (
     <>
-      <ShowHide />
-      <TwoSquares />
-      <CounterFn />
-      <CounterWithInputFn />
+      <BookCart />
+      <LoginPassword />
     </>
   );
 }
