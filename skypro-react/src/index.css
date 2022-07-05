@@ -20,6 +20,8 @@ body {
   padding: 5rem;
 }
 
+/************/
+
 .counter {
   display: flex;
   justify-content: center;
@@ -29,6 +31,8 @@ body {
 .counter__button {
   padding: 5px 10px;
   background-color: #354e96;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -45,13 +49,18 @@ body {
   border-radius: 5px;
   border: 2px solid #354e96;
 }
-
+/*********************/
 .cart-content {
   margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.book {
-  width: 60rem;
+.book,
+.total {
+  width: 55rem;
+  height: 8rem;
   padding: 10px 16px;
   display: flex;
   align-items: center;
@@ -61,6 +70,11 @@ body {
   color: #182e6e;
   border: 1px solid #8f9dc5;
   border-radius: 6px;
+}
+
+.total {
+  color: #134e4a;
+  border: 1px solid #0d9488;
 }
 
 .book__title {
@@ -73,19 +87,24 @@ body {
   width: 4rem;
 }
 
-.total-price {
-  margin-right: 7rem;
+.total__text {
+  margin-right: 5rem;
+  display: flex;
+  gap: 6rem;
   font-weight: 600;
+  font-size: 18px;
 }
 
 .delete {
   padding: 5px 10px;
-  background-color: #354e96;
+  background-color: #fa5252;
+  font-weight: 600;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
+/***********************/
 
 .login-password {
   width: max-content;
@@ -126,6 +145,8 @@ body {
 .alert {
   color: #e11d48;
 }
+
+/***********************/
 
 .numbers-title {
   margin-top: 2rem;
