@@ -1,4 +1,4 @@
-const fillArrayWithNumbers = num => {
+const fillArrayWithNumbers = (num) => {
   const arr = [];
   for (let i = 0; i <= num; i++) {
     arr.push(i);
@@ -6,9 +6,9 @@ const fillArrayWithNumbers = num => {
   return arr;
 };
 
-const isOdd = num => num % 2 !== 0;
+const isOdd = (num) => num % 2 !== 0;
 
-const isSimple = num => {
+const isSimple = (num) => {
   if (num === 1 || num === 0) {
     return false;
   } else {
@@ -21,4 +21,17 @@ const isSimple = num => {
   }
 };
 
-export { fillArrayWithNumbers, isOdd, isSimple };
+const numberStyle = (num) => {
+  if (isSimple(num)) {
+    return {
+      backgroundColor: '#ff6b6b',
+    };
+  }
+  if (isOdd(num)) {
+    return {
+      backgroundColor: '#fcc419',
+    };
+  }
+};
+
+export { fillArrayWithNumbers, numberStyle };
