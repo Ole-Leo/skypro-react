@@ -1,0 +1,52 @@
+.login-password {
+  width: 70rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  color: #182e6e;
+}
+
+.form {
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.input-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.6rem;
+}
+
+.form__input,
+.form__btn {
+  padding: 4px 6px;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: 1px solid #182e6e;
+  outline: none;
+}
+
+.form__input:focus {
+  box-shadow: 0px 0px 1px 0px #8f9dc5;
+}
+
+.form__btn {
+  padding: 5px 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #182e6e;
+  color: #fefefe;
+  transition: all 0.3s ease-in-out;
+}
+
+.form__btn:hover {
+  background-color: #304583;
+}
+
+.alert {
+  color: #e11d48;
+  font-size: 1.4rem;
+}

@@ -1,0 +1,26 @@
+.input-container {
+  width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 2px;
+}
+
+.input {
+  width: 2rem;
+  padding: 0 5px;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #182e6e;
+  border-radius: 5px;
+  border: 2px solid #354e96;
+}
+
+.input-btn {
+  padding: 5px 10px;
+  background-color: #354e96;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
