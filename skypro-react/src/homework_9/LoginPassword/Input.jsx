@@ -14,9 +14,9 @@ const Input = ({ ...input }) => {
           name={input.name}
           type={input.type}
           placeholder={input.text}
-          onChange={(event) => inputProps.onChange(event)}
+          onChange={inputProps.onChange}
           value={inputProps.inputValue}
-          onBlur={(event) => inputProps.onBlur(event)}
+          onBlur={inputProps.onBlur}
         />
 
         <span className="alert">{inputProps.errorMessage}</span>

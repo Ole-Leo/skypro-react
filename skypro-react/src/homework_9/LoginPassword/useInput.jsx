@@ -9,7 +9,9 @@ const useInput = (value) => {
 
   const validation = (name, value) => {
     if (name === 'password' && value.length < validPasswordLength) {
-      setErrorMessage('Password should be at least 6 characters');
+      setErrorMessage(
+        `Password should be at least ${validPasswordLength} characters`
+      );
     } else {
       setErrorMessage('');
     }
