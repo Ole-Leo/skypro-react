@@ -1,0 +1,23 @@
+.container {
+  width: 70rem;
+  height: 15vh;
+  margin: 0 auto;
+  margin-top: 5rem;
+  font-size: 1.8rem;
+}
+
+.select {
+  margin-left: 1.2rem;
+  padding: 2px 4px;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  outline: none;
+}
+
+.text {
+  width: fit-content;
+  padding: 3px 6px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
