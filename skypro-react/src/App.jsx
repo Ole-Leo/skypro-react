@@ -1,13 +1,11 @@
-import Counter from './homework_9/Counter/Counter';
-import Form from './homework_9/LoginPassword/Form';
-import Select from './homework_9/Select/Select';
+import Form from './homework_10/LoginPassword/Form';
+import Palette from './homework_10/ColorGenerator/Palette';
 
 const App = () => {
   return (
     <>
-      <Select />
-      <Counter />
       <Form />
+      <Palette />
     </>
   );
 };

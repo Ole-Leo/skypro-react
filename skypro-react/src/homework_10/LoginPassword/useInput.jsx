@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const validEmail = new RegExp(/^[\w]{1}[\w-.]*@[\w-]+\.[a-z]{2,4}$/i);
 const validPasswordLength = 6;
 
-const useInput = (value) => {
-  const [inputValue, setInputValue] = useState(value);
+const useInput = () => {
   const [errorMessage, setErrorMessage] = useState('');
+  const inputRef = useRef(null);
 
   const validation = (name, value) => {
     if (name === 'password' && value.length < validPasswordLength) {
@@ -24,19 +24,20 @@ const useInput = (value) => {
   const onBlur = (event) => {
     const { name, value } = event.target;
     validation(name, value);
-    !inputValue && setErrorMessage(`Please, fill ${name} field`);
+    !value && setErrorMessage(`Please, fill ${name} field`);
   };
 
-  const onChange = (event) => {
-    const { value } = event.target;
-    setInputValue(value);
+  const onKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      onBlur(event);
+    }
   };
 
   return {
-    inputValue,
+    inputRef,
     errorMessage,
     onBlur,
-    onChange,
+    onKeyDown,
   };
 };
 
