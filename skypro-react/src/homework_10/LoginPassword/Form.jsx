@@ -8,9 +8,9 @@ const Form = () => {
     event.preventDefault();
   };
 
-  const formInputs = inputData.map((input) => {
-    return <Input key={input.id} {...input} />;
-  });
+  const formInputs = inputData.map((input) => (
+    <Input key={input.id} {...input} />
+  ));
 
   return (
     <div className="login-password">

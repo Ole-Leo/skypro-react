@@ -9,8 +9,7 @@ const Input = ({ ...input }) => {
     if (ref.current.name === 'email') {
       ref.current.focus();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [inputProps.inputRef]);
 
   return (
     <>
