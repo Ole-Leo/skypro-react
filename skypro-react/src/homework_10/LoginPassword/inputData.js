@@ -1,7 +1,7 @@
 const inputData = [
   {
     id: '1',
-    type: 'email',
+    type: 'text',
     name: 'email',
     text: 'Email',
   },

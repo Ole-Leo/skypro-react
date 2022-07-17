@@ -1,7 +1,15 @@
+import { useEffect } from 'react';
 import useInput from './useInput';
 
 const Input = ({ ...input }) => {
   const inputProps = useInput('');
+
+  useEffect(() => {
+    const ref = inputProps.inputRef;
+    if (ref.current.name === 'email') {
+      ref.current.focus();
+    }
+  }, [inputProps.inputRef]);
 
   return (
     <>
@@ -14,9 +22,9 @@ const Input = ({ ...input }) => {
           name={input.name}
           type={input.type}
           placeholder={input.text}
-          onChange={inputProps.onChange}
-          value={inputProps.inputValue}
           onBlur={inputProps.onBlur}
+          ref={inputProps.inputRef}
+          onKeyDown={inputProps.onKeyDown}
         />
 
         <span className="alert">{inputProps.errorMessage}</span>
