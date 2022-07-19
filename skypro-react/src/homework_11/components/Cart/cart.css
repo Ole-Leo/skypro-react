@@ -1,0 +1,66 @@
+.cart-content {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  color: #182e6e;
+  background-color: #f5f5f5;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book,
+.total {
+  width: 55rem;
+  height: 8rem;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.6rem;
+  color: #182e6e;
+  border: 1px solid #8f9dc5;
+  border-radius: 6px;
+}
+
+.book__title {
+  width: 30rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.book__price {
+  font-weight: 500;
+  width: 4rem;
+}
+
+.delete {
+  width: 3rem;
+  height: 3rem;
+  background-color: #fa5252;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.total {
+  height: 5rem;
+  border: 2px solid #8f9dc5;
+}
+
+.total__text {
+  width: 14rem;
+  margin-right: 5rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 18px;
+}
